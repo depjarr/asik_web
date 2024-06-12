@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>ASIK</h1>
+        <form class="search-form">
+            <input type="text" placeholder="cari ponsel" name="search" id="search" autocomplete="off" onfocus="toggleCompare(true)">
+            <button type="submit">Cari</button>
+        </form>
+        
+    </header>
+    <main>
+        <h1>Menurut Netizen Item mana yang lebih baik</h1>
+        <div class="product-grid">
+            <div class="product" onclick="goToProductPage('product3.html')">
+                <img src="s24ultra.png" alt="Samsung S24 Ultra">
+                <h2>Samsung S24 Ultra</h2>
+                <p>Memiliki layar AMOLED 6.8 inci, chipset Exynos 2100, sistem kamera 200MP, terdapat S-Pen, dan baterai 5.000mAh.</p>
+                <p class="price">Harga: Rp21.999.000</p>
+            </div>
+            <div class="product" onclick="goToProductPage('product6.html')">
+                <img src="ip15promax.png" alt="iPhone 15 Pro Max">
+                <h2>iPhone 15 Pro Max</h2>
+                <p>Memiliki layar 6.7 inci Super Retina XDR, chip A16 Bionic, dan sistem kamera Pro 48MP dan terdapat fitur LiDAR Scanner dan ProRAW.</p>
+                <p class="price">Harga mulai: Rp24.999.000</p>
+            </div>
+        </div>
+    </main>
+    <script src="dashboard.js"></script>
+</body>
+</html>

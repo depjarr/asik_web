@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Samsung S24 Ultra</title>
+<style>
+    body { font-family: Arial, sans-serif; }
+    .tabs { overflow: hidden; background-color: #646262; } /* Grey background for contrast */
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: inherit; /* Inherit grey background from .tabs */
+        padding: 14px 14px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #fff; /* White text */
+    }
+    .tab:hover { background-color: #ddd; } /* Light grey on hover for feedback */
+    .tabcontent {
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-top: none;
+        display: block; /* Initially hidden, shown via JavaScript */
+    }
+    .specs { display: flex; flex-wrap: wrap; justify-content: space-between; }
+    .card {
+        flex: 1 1 15%;
+        box-shadow: 0 4px 8px 0 rgba(163, 156, 156, 0.199);
+        margin: 10px;
+        padding: 10px;
+    }
+    .feature-bar {
+        background-color: #ddd;
+        width: 60%;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .centered-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%; /* Adjust the width as needed */
+    }
+
+    /* Styling for the review button */
+    #reviewButton {
+        margin-top: 70px; /* Spacing above the button */
+        float: right; /* Aligns the button to the right */
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #646262;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #reviewButton:hover {
+        background-color: #646262;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="tabs">
+    <div class="tab" onclick="openTab(event, 'Color')">Warna</div>
+    <div class="tab" onclick="openTab(event, 'Overview')">Spesifikasi</div>
+    <div class="tab" onclick="openTab(event, 'Reviews')">Ulasan</div>
+</div>
+<h1>Samsung S24 Utra</h1>
+<div id="Color" class="tabcontent">
+    <h2>Warna yang tersedia</h2>
+    <img src="warnas24ultra.png" alt="Samsung S24 Ultra" class="centered-img">
+</div>
+
+<div id="Overview" class="tabcontent">
+    <div class="specs">
+        <div class="card">
+            <h4>Processor</h4>
+            <div>3.39 GHz</div>
+        </div>
+        <div class="card">
+            <h4>Display</h4>
+            <div>6.8</div>
+        </div>
+        <div class="card">
+            <h4>Technology</h4>
+            <div>Dynamic AMOLED 2X</div>
+        </div>
+        <div class="card">
+            <h4>Max Refresh Rate</h4>
+            <div>120 Hz</div>
+        </div>
+        <div class="card">
+            <h4>Camera</h4>
+            <div>200.0 MP + 50.0 MP + 12.0 MP + 10.0 MP</div>
+        </div>
+        <div class="card">
+            <h4>Front Camera</h4>
+            <div>12.0 MP</div>
+        </div>
+        <div class="card">
+            <h4>Video Recording Resolution</h4>
+            <div>UHD 8K (7680 x 4320) @30fps</div>
+        </div>
+        <div class="card">
+            <h4>Slow Motion</h4>
+            <div>240fps @FHD, 120fps @UHD</div>
+        </div>
+        <div class="card">
+            <h4>Zoom Camera</h4>
+            <div>Optical Zoom 3x and 5x, Optical quality Zoom 2x and 10x, Digital Zoom up to 100x</div>
+        </div>
+        <div class="card">
+            <h4>Memori</h4>
+            <div>12/512 GB</div>
+        </div>
+        <div class="card">
+            <h4>Network</h4>
+            <div>5G</div>
+        </div>
+        <div class="card">
+            <h4>Number of SIM</h4>
+            <div>Dual-SIM</div>
+        </div>
+        <div class="card">
+            <h4>OS</h4>
+            <div>Android 14</div>
+        </div>
+        <div class="card">
+            <h4>NFC</h4>
+            <div>Yes</div>
+        </div>
+        <div class="card">
+            <h4>Battery</h4>
+            <div>5000</div>
+        </div>
+        <div class="card">
+            <h4>Video Playing resolution</h4>
+            <div>UHD 8K (7680 x 4320) @60fps</div>
+        </div>
+        <div class="card">
+            <h4>S Pen Support</h4>
+            <div>Yes</div>
+        </div>
+        <div class="card">
+            <h4>Weight</h4>
+            <div>232 g</div>
+        </div>
+        <div class="card">
+            <h4>UWB (Ultra-Wideband)</h4>
+            <div>Yes</div>
+        </div>
+        <div class="card">
+            <h4>Sensor</h4>
+            <div>Accelerometer, Barometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Hall Sensor, Light Sensor, Proximity Sensor</div>
+        </div>
+    </div>
+    <a href="review.html" id="reviewButton">Review Product Ini</a>
+
+</div>
+
+
+<script src="dashboard.js"></script> <!-- Pastikan link ke file JavaScript Anda benar -->
+</body>
+</html>

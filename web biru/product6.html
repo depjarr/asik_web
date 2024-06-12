@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail iPhone 15 Pro Max</title>
+<style>
+    body { font-family: Arial, sans-serif; }
+    .tabs { overflow: hidden; background-color: #646262; } /* Grey background for contrast */
+    .tab {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: inherit; /* Inherit grey background from .tabs */
+        padding: 14px 14px;
+        transition: 0.3s;
+        cursor: pointer;
+        color: #fff; /* White text */
+    }
+    .tab:hover { background-color: #ddd; } /* Light grey on hover for feedback */
+    .tabcontent {
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-top: none;
+        display: block; /* Initially hidden, shown via JavaScript */
+    }
+    .specs { display: flex; flex-wrap: wrap; justify-content: space-between; }
+    .card {
+        flex: 1 1 15%;
+        box-shadow: 0 4px 8px 0 rgba(163, 156, 156, 0.199);
+        margin: 10px;
+        padding: 10px;
+    }
+    .feature-bar {
+        background-color: #ddd;
+        width: 60%;
+        height: 20px;
+        border-radius: 5px;
+    }
+    .centered-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%; /* Adjust the width as needed */
+    }
+    .image-caption {
+        text-align: center;
+        font-size: 15px; /* Smaller font size */
+        color: #8e8989; /* Grey text color */
+        margin-left: auto;
+        margin-right: auto; /* Small margin above the caption */
+    }
+    /* Styling for the review button */
+    #reviewButton {
+        margin-top: 70px; /* Spacing above the button */
+        float: right; /* Aligns the button to the right */
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #646262;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #reviewButton:hover {
+        background-color: #646262;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="tabs">
+    <div class="tab" onclick="openTab(event, 'Overview')">Spesifikasi</div>
+    <div class="tab" onclick="openTab(event, 'Color')">Warna</div>
+    <div class="tab" onclick="openTab(event, 'Reviews')">Ulasan</div>
+</div>
+
+<div id="Overview" class="tabcontent">
+    <h2>iPhone 15 Pro Max</h2>
+    <p>Mengapa iPhone 15 Pro Max lebih baik daripada merek lain?</p>
+    <div class="specs">
+        <div class="card">
+            <h4>Chip</h4>
+            <div>Chip A17 Pro</div>
+        </div>
+        <div class="card">
+            <h4>Display</h4>
+            <div>6.7</div>
+        </div>
+        <div class="card">
+            <h4>Technology</h4>
+            <div>Dynamic Island</div>
+        </div>
+        <div class="card">
+            <h4>Audio</h4>
+            <div>Audio FaceTime, Voice over LTE</div>
+        </div>
+        <div class="card">
+            <h4>Camera</h4>
+            <div>48.0 MP + 12.0 MP + 12.0 MP</div>
+        </div>
+        <div class="card">
+            <h4>Camera True Depth</h4>
+            <div>12.0 MP</div>
+        </div>
+        <div class="card">
+            <h4>Video Recording Resolution</h4>
+            <div>4K, HD 1080p, HD 720p</div>
+        </div>
+        <div class="card">
+            <h4>RAM</h4>
+            <div>8 GB</div>
+        </div>
+        <div class="card">
+            <h4>ROM</h4>
+            <div>128 GB/256 GB/ 512 GB/ 1 TB</div>
+        </div>
+        <div class="card">
+            <h4>Zoom Camera</h4>
+            <div>Zoom optik 5x memperbesar, zoom optik 2x memperkecil; rentang zoom optik 10x, zoom digital hingga 25x</div>
+        </div>
+        <div class="card">
+            <h4>Network</h4>
+            <div>5G</div>
+        </div>
+        <div class="card">
+            <h4>Number of SIM</h4>
+            <div>Dual-SIM</div>
+        </div>
+        <div class="card">
+            <h4>OS</h4>
+            <div>iOS 17</div>
+        </div>
+        <div class="card">
+            <h4>NFC</h4>
+            <div>Yes</div>
+        </div>
+        <div class="card">
+            <h4>Battery</h4>
+            <div>4441</div>
+        </div>
+        <div class="card">
+            <h4>Video Playing resolution</h4>
+            <div>HEVC, H.264, Prores, HDR dengan Dolby Vision, HDR10, dan HLG</div>
+        </div>
+        <div class="card">
+            <h4>Dimension</h4>
+            <div>159.9 x 76.7 x 8.2</div>
+        </div>
+        <div class="card">
+            <h4>Weight</h4>
+            <div>221 g</div>
+        </div>
+        <div class="card">
+            <h4>Pengisian Daya</h4>
+            <div>15 Watt</div>
+        </div>
+        <div class="card">
+            <h4>Sensor</h4>
+            <div>	
+                Face ID, LiDAR Scanner, Barometer, Giroskop, Akselerometer, Sensor kedekatan jarak, Sensor cahaya sekitar ganda</div>
+        </div>
+    </div>
+</div>
+
+<div id="Color" class="tabcontent">
+    <h2>Warna yang tersedia</h2>
+    <img src="warnaip15pro.png" alt="iPhone 15 pro" class="centered-img">
+    <div class="image-caption">Titanium hitam, Titanium putih, Titanium Biru, Titanium alami</div>
+</div>
+
+</div>
+<a href="review2.html" id="reviewButton">Review Product Ini</a>
+</script>
+
+</body>
+</html>

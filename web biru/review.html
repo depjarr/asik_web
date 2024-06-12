@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Page with Interactive Star Rating</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    .title { font-size: 24px; font-weight: bold; }
+    .button { padding: 8px 16px; background-color: rgb(61, 60, 60); color: white; border: none; cursor: pointer; margin-top: 10px; display: inline-block; width: 15%; }
+    .review { border: 1px solid #ccc; padding: 10px; width: 90%; margin-top: 10px; }
+    .star { color: grey; cursor: pointer; font-size: 30px; }
+    .active { color: orange; }
+    #imagePopup { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
+    #imagePopup img { display: block; margin: 15% auto; max-width: 600px; }
+</style>
+<script>
+    function highlightStars(index) {
+        var stars = document.querySelectorAll('.star');
+        stars.forEach((star, i) => {
+            if (i <= index) {
+                star.classList.add('active');
+            } else {
+                star.classList.remove('active');
+            }
+        });
+    }
+
+    function submitReview() {
+        var name = document.getElementById("name").value;
+        var review = document.getElementById("review").value;
+        var rating = document.querySelectorAll('.star.active').length;
+        console.log('Review by ' + name + ': Rating: ' + rating + ', Comment: ' + review);
+        showThankYou();
+    }
+
+    function showThankYou() {
+        alert('Terima kasih atas reviewnya');
+        window.location.href = 'index.html';
+    }
+
+    function view() {
+        document.getElementById('imagePopup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('imagePopup').style.display = 'none';
+    }
+</script>
+</head>
+<body>
+<div class="title">Write a Review</div>
+<input type="text" id="name" class="review" placeholder="Name">
+<div class="title">Rating</div>
+<div>
+    <i class="fas fa-star star" onclick="highlightStars(0)"></i>
+    <i class="fas fa-star star" onclick="highlightStars(1)"></i>
+    <i class="fas fa-star star" onclick="highlightStars(2)"></i>
+    <i class="fas fa-star star" onclick="highlightStars(3)"></i>
+    <i class="fas fa-star star" onclick="highlightStars(4)"></i>
+</div>
+<div class="title">Review</div>
+<textarea id="review" class="review" placeholder="Type your review here" rows="4"></textarea>
+<button class="button" onclick="submitReview()">Submit</button>
+<button class="button" onclick="view()">View</button>
+<div id="imagePopup" onclick="closePopup()">
+    <img src="dataip.png" alt="Displayed Image">
+</div>
+</body>
+</html>

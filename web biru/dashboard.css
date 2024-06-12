@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background: #646262;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #444;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px; /* Adjusted margin to create space */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Change from 3 to 2 columns if showing only 2 products */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%; /* Ensure the grid takes full available width */
+}
+
+.product {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 80%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 1rem; /* Adjusted font size for product titles */
+}
+
+.product p {
+    font-size: 0.9rem; /* Adjusted font size for product descriptions */
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+h1 {
+    margin-top: 20px; /* Added margin to create space */
+    margin-bottom: 20px; /* Increased bottom margin */
+    font-size: 1.2rem; /* Adjusted font size for the main heading */
+}
+
+/* Style untuk form review */
+.review-form .form-group {
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: inline-block;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    float: right; /* Membuat bintang berurutan dari kanan ke kiri */
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: gold;
+}
