@@ -58,6 +58,22 @@
     #reviewButton:hover {
         background-color: #646262;
     }
+
+    /* Styling for the review button */
+    #backButton {
+        margin-top: 70px; /* Spacing above the button */
+        float: left; /* Aligns the button to the right */
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #646262;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #backButton:hover {
+        background-color: #646262;
+    }
 </style>
 
 </head>
@@ -66,7 +82,6 @@
 <div class="tabs">
     <div class="tab" onclick="openTab(event, 'Color')">Warna</div>
     <div class="tab" onclick="openTab(event, 'Overview')">Spesifikasi</div>
-    <div class="tab" onclick="openTab(event, 'Reviews')">Ulasan</div>
 </div>
 <h1>Samsung S24 Utra</h1>
 <div id="Color" class="tabcontent">
@@ -158,9 +173,9 @@
         </div>
     </div>
     <a href="review.html" id="reviewButton">Review Product Ini</a>
+    <a href="index.html" id="backButton">Back</a> <!-- Changed to <a> for styling consistency -->
 
 </div>
-
 
 <script src="dashboard.js"></script> <!-- Pastikan link ke file JavaScript Anda benar -->
 </body>
