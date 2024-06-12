@@ -64,6 +64,22 @@
     #reviewButton:hover {
         background-color: #646262;
     }
+    /* Styling for the review button */
+    #backButton {
+        margin-top: 70px; /* Spacing above the button */
+        float: left; /* Aligns the button to the right */
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #646262;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    #backButton:hover {
+        background-color: #646262;
+    }
+</style>
 </style>
 
 </head>
@@ -72,7 +88,12 @@
 <div class="tabs">
     <div class="tab" onclick="openTab(event, 'Overview')">Spesifikasi</div>
     <div class="tab" onclick="openTab(event, 'Color')">Warna</div>
-    <div class="tab" onclick="openTab(event, 'Reviews')">Ulasan</div>
+</div>
+
+<div id="Color" class="tabcontent">
+    <h2>Warna yang tersedia</h2>
+    <img src="warnaip15pro.png" alt="iPhone 15 pro" class="centered-img">
+    <div class="image-caption">Titanium hitam, Titanium putih, Titanium Biru, Titanium alami</div>
 </div>
 
 <div id="Overview" class="tabcontent">
@@ -163,14 +184,10 @@
     </div>
 </div>
 
-<div id="Color" class="tabcontent">
-    <h2>Warna yang tersedia</h2>
-    <img src="warnaip15pro.png" alt="iPhone 15 pro" class="centered-img">
-    <div class="image-caption">Titanium hitam, Titanium putih, Titanium Biru, Titanium alami</div>
-</div>
-
 </div>
 <a href="review2.html" id="reviewButton">Review Product Ini</a>
+<a href="index.html" id="backButton">Back</a> <!-- Changed to <a> for styling consistency -->
+
 </script>
 
 </body>
