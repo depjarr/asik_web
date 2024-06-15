@@ -6,22 +6,22 @@
 <title>Detail Samsung S24 Ultra</title>
 <style>
     body { font-family: Arial, sans-serif; }
-    .tabs { overflow: hidden; background-color: #646262; } /* Grey background for contrast */
+    .tabs { overflow: hidden; background-color: #646262; }
     .tab {
         float: left;
         border: 1px solid #ccc;
-        background-color: inherit; /* Inherit grey background from .tabs */
+        background-color: inherit;
         padding: 14px 14px;
         transition: 0.3s;
         cursor: pointer;
-        color: #fff; /* White text */
+        color: #fff;
     }
-    .tab:hover { background-color: #ddd; } /* Light grey on hover for feedback */
+    .tab:hover { background-color: #ddd; }
     .tabcontent {
         padding: 30px;
         border: 1px solid #ccc;
         border-top: none;
-        display: block; /* Initially hidden, shown via JavaScript */
+        display: none;
     }
     .specs { display: flex; flex-wrap: wrap; justify-content: space-between; }
     .card {
@@ -40,13 +40,11 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%; /* Adjust the width as needed */
+        width: 50%;
     }
-
-    /* Styling for the review button */
     #reviewButton {
-        margin-top: 70px; /* Spacing above the button */
-        float: right; /* Aligns the button to the right */
+        margin-top: 70px;
+        float: right;
         padding: 10px 20px;
         font-size: 16px;
         background-color: #646262;
@@ -58,11 +56,9 @@
     #reviewButton:hover {
         background-color: #646262;
     }
-
-    /* Styling for the review button */
     #backButton {
-        margin-top: 70px; /* Spacing above the button */
-        float: left; /* Aligns the button to the right */
+        margin-top: 70px;
+        float: left;
         padding: 10px 20px;
         font-size: 16px;
         background-color: #646262;
@@ -74,6 +70,10 @@
     #backButton:hover {
         background-color: #646262;
     }
+    #Review img {
+        width: 40%; /* Set the image width to 100% of the container */
+        height: auto; /* Maintain the aspect ratio */
+    }
 </style>
 
 </head>
@@ -84,11 +84,10 @@
     <div class="tab" onclick="openTab(event, 'Overview')">Spesifikasi</div>
     <div class="tab" onclick="openTab(event, 'Review')">Ulasan</div>
 </div>
-<h1>Samsung S24 Utra</h1>
+<h1>Samsung S24 Ultra</h1>
 <div id="Color" class="tabcontent">
     <h2>Warna yang tersedia</h2>
     <img src="warnas24ultra.png" alt="Samsung S24 Ultra" class="centered-img">
-</div>
 </div>
 
 <div id="Overview" class="tabcontent">
@@ -102,7 +101,7 @@
             <div>6.8</div>
         </div>
         <div class="card">
-            <h4>Technology</h4>
+            <h4>Technology</h>
             <div>Dynamic AMOLED 2X</div>
         </div>
         <div class="card">
@@ -126,15 +125,15 @@
             <div>240fps @FHD, 120fps @UHD</div>
         </div>
         <div class="card">
-            <h4>Zoom Camera</h4>
+            <h4>Zoom Camera</h>
             <div>Optical Zoom 3x and 5x, Optical quality Zoom 2x and 10x, Digital Zoom up to 100x</div>
         </div>
         <div class="card">
-            <h4>Memori</h4>
+            <h4>Memori</h>
             <div>12/512 GB</div>
         </div>
         <div class="card">
-            <h4>Network</h4>
+            <h4>Network</h>
             <div>5G</div>
         </div>
         <div class="card">
@@ -146,7 +145,7 @@
             <div>Android 14</div>
         </div>
         <div class="card">
-            <h4>NFC</h4>
+            <h4>NFC</h>
             <div>Yes</div>
         </div>
         <div class="card">
@@ -173,13 +172,54 @@
             <h4>Sensor</h4>
             <div>Accelerometer, Barometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Hall Sensor, Light Sensor, Proximity Sensor</div>
         </div>
-        
+        <div class="card">
+            <h4>Resolution</h4>
+            <div>3120 x 1440 (Quad HD+)</div>
+        </div>
+        <div class="card">
+            <h4>Color Depth</h4>
+            <div>16M</div>
+        </div>
+        <div class="card">
+            <h4>Main Camera - Auto Focus</h4>
+            <div>Yes</div>
+        </div>
+        <div class="card">
+            <h4>USB Interface</h4>
+            <div>USB Type-C</div>
+        </div>
     </div>
     <a href="https://id.shp.ee/TJJx5RB">Product dapat dibeli di shopee</a>
     <a href="review.html" id="reviewButton">Review Product Ini</a>
-    <a href="index.html" id="backButton">Back</a> <!-- Changed to <a> for styling consistency -->
+    <a href="index.html" id="backButton">Back</a>
 </div>
 
-<script src="dashboard.js"></script> <!-- Pastikan link ke file JavaScript Anda benar -->
+<div id="Review" class="tabcontent">
+    <h2>Ulasan</h2>
+    <img src="ulasans24u.jpg" alt="Review Image" class="centered-img">
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Open the Color and Overview tabs by default
+    document.getElementById('Color').style.display = 'block';
+    document.getElementById('Overview').style.display = 'block';
+    document.getElementsByClassName('tab')[0].className += ' active';
+    document.getElementsByClassName('tab')[1].className += ' active';
+</script>
+
 </body>
 </html>
