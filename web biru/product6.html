@@ -21,7 +21,7 @@
         padding: 30px;
         border: 1px solid #ccc;
         border-top: none;
-        display: block; /* Initially hidden, shown via JavaScript */
+        display: none; /* Initially hidden, shown via JavaScript */
     }
     .specs { display: flex; flex-wrap: wrap; justify-content: space-between; }
     .card {
@@ -79,17 +79,21 @@
     #backButton:hover {
         background-color: #646262;
     }
-</style>
+    #Review img {
+        width: 40%; /* Set the image width to 100% of the container */
+        height: auto; /* Maintain the aspect ratio */
+    }
 </style>
 
 </head>
 <body>
 
 <div class="tabs">
-    <div class="tab" onclick="openTab(event, 'Overview')">Spesifikasi</div>
     <div class="tab" onclick="openTab(event, 'Color')">Warna</div>
+    <div class="tab" onclick="openTab(event, 'Overview')">Spesifikasi</div>
+    <div class="tab" onclick="openTab(event, 'Review')">Ulasan</div>
 </div>
-
+<h1>iPhone 15 Pro Max</h1>
 <div id="Color" class="tabcontent">
     <h2>Warna yang tersedia</h2>
     <img src="warnaip15pro.png" alt="iPhone 15 pro" class="centered-img">
@@ -97,8 +101,6 @@
 </div>
 
 <div id="Overview" class="tabcontent">
-    <h2>iPhone 15 Pro Max</h2>
-    <p>Mengapa iPhone 15 Pro Max lebih baik daripada merek lain?</p>
     <div class="specs">
         <div class="card">
             <h4>Chip</h4>
@@ -109,23 +111,23 @@
             <div>6.7</div>
         </div>
         <div class="card">
-            <h4>Technology</h4>
+            <h4>Technology</h>
             <div>Dynamic Island</div>
         </div>
         <div class="card">
-            <h4>Audio</h4>
+            <h4>Audio</h>
             <div>Audio FaceTime, Voice over LTE</div>
         </div>
         <div class="card">
-            <h4>Camera</h4>
+            <h4>Camera</h>
             <div>48.0 MP + 12.0 MP + 12.0 MP</div>
         </div>
         <div class="card">
-            <h4>Camera True Depth</h4>
+            <h4>Camera True Depth</h>
             <div>12.0 MP</div>
         </div>
         <div class="card">
-            <h4>Video Recording Resolution</h4>
+            <h4>Video Recording Resolution</h>
             <div>4K, HD 1080p, HD 720p</div>
         </div>
         <div class="card">
@@ -137,7 +139,7 @@
             <div>128 GB/256 GB/ 512 GB/ 1 TB</div>
         </div>
         <div class="card">
-            <h4>Zoom Camera</h4>
+            <h4>Zoom Camera</h>
             <div>Zoom optik 5x memperbesar, zoom optik 2x memperkecil; rentang zoom optik 10x, zoom digital hingga 25x</div>
         </div>
         <div class="card">
@@ -181,14 +183,57 @@
             <div>	
                 Face ID, LiDAR Scanner, Barometer, Giroskop, Akselerometer, Sensor kedekatan jarak, Sensor cahaya sekitar ganda</div>
         </div>
+        <div class="card">
+            <h4>Pemutaran Audio</h4>
+            <div>	
+                AAC, MP3, Apple Lossless, FLAC, Dolby Digital, Dolby Digital Plus, dan Dolby Atmos</div>
+        </div>
+        <div class="card">
+            <h4>Tahan cipratan, air, dan debu</h4>
+            <div>	
+                Level IP68 (maksimum 6 meter selama 30 menit)</div>
+        </div>
+        <div class="card">
+            <h4>Camera Pro</h4>
+            <div>	
+                Ultra Wide 12 MP</div>
+        </div>
+        <div class="card">
+            <h4>Format Gambar yang diambil</h4>
+            <div>	
+                HEIF, JPEG, dan DNG</div>
+        </div>
     </div>
+    <a href="https://id.shp.ee/KhNBnfb">Product dapat dibeli di shopee</a>
+    <a href="review2.html" id="reviewButton">Review Product Ini</a>
+    <a href="index.html" id="backButton">Back</a>
 </div>
 
+<div id="Review" class="tabcontent">
+    <h2>Ulasan</h2>
+    <img src="ulasanip15.jpg" alt="Review Image" class="centered-img">
 </div>
-<a href="https://id.shp.ee/KhNBnfb">Product dapat dibeli di shopee</a>
-<a href="review2.html" id="reviewButton">Review Product Ini</a>
-<a href="index.html" id="backButton">Back</a> <!-- Changed to <a> for styling consistency -->
 
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Open the Color and Overview tabs by default
+    document.getElementById('Color').style.display = 'block';
+    document.getElementById('Overview').style.display = 'block';
+    document.getElementsByClassName('tab')[0].className += ' active';
+    document.getElementsByClassName('tab')[1].className += ' active';
 </script>
 
 </body>
